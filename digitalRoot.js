@@ -4,15 +4,15 @@ var digitalRoot = function (integer) {
     return integer;
   }
 
-  var result = 0;
-  var arrayOfInts = integer.toString().split('').map(function (value) {
-    return parseInt(value);
-  });
+  var rootSum = integer.toString().split('')
+    .map(function (value) {
+      return parseInt(value);
+    })
+    .reduce(function (a, b) {
+      return a + b;
+    });
   
-  arrayOfInts.forEach(function (number) {
-    result += number;
-  });
-
-  return digitalRoot(result);
+  return digitalRoot(rootSum);
 };
+
 
