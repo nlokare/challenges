@@ -1,13 +1,12 @@
-
 var $ = function (element) {
   return new _$(element);
-}
+};
 
 var _$ = function (element) {
   this.elements = document.querySelectorAll(element);
-}
+};
 
-_$.prototype.css = function (arguments) {
+_$.prototype.css = function (arguments) {   
   var self = this;
   var attributeList = arguments.split(';');
   if (attributeList[attributeList.length - 1] === '') {
@@ -36,4 +35,3 @@ _$.prototype.click = function (func) {
   }
   return this;
 };
-
